@@ -1,0 +1,318 @@
+	description	author	year	journal	function	class	vtype	ghz	jkp	hxz	hxz_ref	cz	note	sample_start	sample_end
+1	Effective Tax Rate	Abarbanell and Bushee	1998	AR						Etr	A.5.24	ETR		1974	1988
+2	Gross margin growth to sales growth	Abarbanell and Bushee	1998	AR	dgp_dsale	funda		pchgm_pchsale	dgp_dsale	dGs	A.5.22	GrGMToGrSales	"GHZ use changes over the previous value, not over the previous two year average. We use the two year average following the original definition. JKP use gp if available, otherwise use (sale-cogs). We follow JKP."	1974	1988
+3	Industry-adjusted change in capital investment	Abarbanell and Bushee	1998	AR	pchcapx_ia	funda		pchcapx_ia		dIi	A.3.11	ChInvIA	"GHZ use changes over the previous value, not over the previous two year average. We use the two year average following the original definition. HXZ use capxv; we use capx or diff(ppent) if capx is missing."	1974	1988
+4	Labor force efficiency	Abarbanell and Bushee	1998	AR	sale_emp_gr1	funda			sale_emp_gr1	Lfe	A.5.25	LaborforceEfficiency		1974	1988
+5	Sales growth to inventory growth	Abarbanell and Bushee	1998	AR	dsale_dinv	funda		pchsale_pchinvt	dsale_dinv	dSi	A.5.20	GrSaleToGrInv	"GHZ use changes over the previous value, not over the previous two year average. We use the two year average following the original definition. "	1974	1988
+6	Sales growth to receivable growth	Abarbanell and Bushee	1998	AR	dsale_drec	funda		pchsale_pchrect	dsale_drec	dSa	A.5.21	GrSaleToGrReceivables	"GHZ use changes over the previous value, not over the previous two year average. We use the two year average following the original definition. "	1974	1988
+7	Sales growth to SG&A growth	Abarbanell and Bushee	1998	AR	dsale_dsga	funda		pchsale_pchxsga	dsale_dsga	dSs	A.5.23	GrSaleToGrOverhead	"GHZ use changes over the previous value, not over the previous two year average. We use the two year average following the original definition. "	1974	1988
+8	Liquidity beta (illiquidity-illiquidity)	Acharya and Pedersen	2005	JFE						Blcc	A.6.25	betaCC		1964	1999
+9	Liquidity beta (illiquidity-return)	Acharya and Pedersen	2005	JFE						Blcr	A.6.25	betaCR		1964	1999
+10	Liquidity beta (return-illiquidity)	Acharya and Pedersen	2005	JFE						Blrc	A.6.25	betaRC		1964	1999
+11	Liquidity beta (return-return)	Acharya and Pedersen	2005	JFE						Bret	A.6.25	betaRR		1964	1999
+12	Net liquidity beta	Acharya and Pedersen	2005	JFE						Bnet	A.6.25	betaNet		1964	1999
+13	Leverage beta	"Adrian, Etula and Muir"	2014	JF						Blev	A.6.25	BetaBDLeverage		1973	2009
+14	Idiosyncratic volatility (GHZ)	"Ali, Hwang, and Trombley"	2003	JFE	idiovol	crspd		idiovol					GHZ version: use weekly returns.	1976	1997
+15	"Idiosyncratic volatility (Org, JKP)"	"Ali, Hwang, and Trombley"	2003	JFE	ivol_capm_252d	crspd			ivol_capm_252d	Iv	A.6.3	IdioVolAHT	JKP version. 	1976	1997
+16	Illiquidity 	Amihud	2002	JFM	ami_126d	crspd		ill	ami_126d	Ami	A.6.16	Illiquidity		1964	1997
+17	Bid-ask spread	Amihud and Mendelson	1986	JFE	baspread	crspd		baspread				BidAskSpread		1961	1980
+18	Three-year investment growth	Anderson and Garcia-Feijoo	2006	JF	capx_gr3	funda			capx_gr3	3Ig	A.3.9	grcapx3y		1976	1999
+19	Two-year investment growth	Anderson and Garcia-Feijoo	2006	JF	capx_gr2	funda		grcapx	capx_gr2	2Ig	A.3.8	grcapx		1976	1999
+20	Dispersion in analyst long-term growth forecasts	"Anderson, Ghysels, and Juergens"	2005	RFS						Dlg	A.5.50	ForecastDispersionLT		1991	1997
+21	Idiosyncratic volatility (CAPM)	Ang et al.	2006	JF	ivol_capm_21d	crspd			ivol_capm_21d	Ivc1	A.6.4	IdioVolCAPM		1963	2000
+22	Idiosyncratic volatility (FF3)	Ang et al.	2006	JF	ivol_ff3_21d	crspd			ivol_ff3_21d	Ivff	A.6.2	IdioVol3F	JKP appear to make mistakes in correcting dof: they divide by (num. days - num. factors) instead of (num. days - 1).	1963	2000
+23	Idiosyncratic volatility (q-factor)	Ang et al.	2006	JF	ivol_hxz4_21d	crspd			ivol_hxz4_21d	Ivq1	A.6.5	IdioVolQF	JKP appear to make mistakes in correcting dof: they divide by (num. days - num. factors) instead of (num. days - 1).	1963	2000
+24	Return volatility	Ang et al.	2006	JF	retvol	crspd		retvol	rvol_21d	Tv	A.6.6	IdioRisk	"JKP use excess returns, while GHZ use total returns. We follow GHZ. We do not impose min. 15 days of return."	1963	2000
+25	Systematic volatility	Ang et al.	2006	JF						Sv	A.6.7	betaVIX		1963	2000
+26	Downside beta	"Ang, Chen, and Xing"	2006	RFS	betadown_252d	crspd			betadown_252d	beta-1	A.6.27	DownsideBeta		1963	2001
+27	Industry-adjusted book-to-market	"Asness, Porter, and Stevens"	2000	WP	bm_ia	funda		bm_ia						1963	1998
+28	Industry-adjusted cash flow-to-price	"Asness, Porter, and Stevens"	2000	WP	cfp_ia	funda		cfp_ia						1963	1998
+29	Industry-adjusted change in employees	"Asness, Porter, and Stevens"	2000	WP	chempia	funda		chempia						1963	1998
+30	Industry-adjusted firm size	"Asness, Porter, and Stevens"	2000	WP	mve_ia	funda		mve_ia						1963	1998
+31	Book-to-market (June ME)	Asnesss and Frazzini	2013	JPM						Bmj	A.2.2				
+32	Highest 5 days of return to volatility	Assness et al.	2020	JFE	rmax5_rvol_21d	crspd			rmax5_rvol_21d					1925	2015
+33	Market correlation	Assness et al.	2020	JFE	corr_1260d	crspd			corr_1260d					1925	2015
+34	Quality minus Junk: Composite	"Assness, Frazzini, and Pedersen"	2018	RAS	qmj	merge			qmj					1957	2016
+35	Quality minus Junk: Growth	"Assness, Frazzini, and Pedersen"	2018	RAS	qmj_growth	merge			qmj_growth					1957	2016
+36	Quality minus Junk: Profitability	"Assness, Frazzini, and Pedersen"	2018	RAS	qmj_prof	merge			qmj_prof					1957	2016
+37	Quality minus Junk: Safety	"Assness, Frazzini, and Pedersen"	2018	RAS	qmj_safety	merge			qmj_safety					1957	2016
+38	Change in quarterly return on assets	"Balakrishnan, Bartov, and Faurel"	2010	JAE	niq_at_chg1	fundq			niq_at_chg1	dRoa	A.4.4	ChangeRoA		1976	2005
+39	Change in quarterly return on equity	"Balakrishnan, Bartov, and Faurel"	2010	JAE	niq_be_chg1	fundq			niq_be_chg1	dRoe	A.4.2 	ChangeRoE	HXZ supplement fundq with funda but we only use fundq following JKP.	1976	2005
+40	Quarterly return on assets	"Balakrishnan, Bartov, and Faurel"	2010	JAE	niq_at	fundq		roaq	niq_at	Roa	A.4.3	roaq		1976	2005
+41	Highest 5 days of return	"Bali, Brown, and Tang"	2017	JFE	rmax5_21d	crspd			rmax5_21d					1993	2012
+42	Maximum daily return	"Bali, Cakici, and Whitelaw"	2011	JFE	rmax1_21d	crspd		maxret	rmax1_21d	Mdr	A.6.18	MaxRet	HXZ require minimum 15 days of return. We don't impose this requirement.	1962	2005
+43	Idiosyncratic skewness (CAPM)	"Bali, Engle, and Murray"	2016	BOOK	iskew_capm_21d	crspd			iskew_capm_21d	Isc	A.6.20	ReturnSkewCAPM		1963	2012
+44	Idiosyncratic skewness (FF3)	"Bali, Engle, and Murray"	2016	BOOK	iskew_ff3_21d	crspd			iskew_ff3_21d	Isff1	A.6.21	ReturnSkew3F		1963	2012
+45	Idiosyncratic skewness (q-factor)	"Bali, Engle, and Murray"	2016	BOOK	iskew_hxz4_21d	crspd			iskew_hxz4_21d	Isq	A.6.22	ReturnSkewQF		1963	2012
+46	Return skewness	"Bali, Engle, and Murray"	2016	BOOK	rskew_21d	crspd			rskew_21d	Ts	A.6.19	ReturnSkew	"JKP use excess returns, while we use total returns."	1963	2012
+47	Cash-based operating profitablility	Ball et al.	2016	JFE	cop_at	funda			cop_at	Cop	A.4.18	CBOperProf	JKP's numerator is different from HXZ's. We follow JKP.	1963	2014
+48	Cash-based operating profits to lagged assets	Ball et al.	2016	JFE	cop_atl1	funda			cop_atl1	Cla	A.4.19	CBOperProfLagAT	JKP's numerator is different from HXZ's. We follow JKP.	1963	2014
+49	Cash-based operating profits to lagged assets (quarterly)	Ball et al.	2016	JFE						Claq	A.4.20	CBOperProfLagAT_q		1963	2014
+50	Operating profits-to-assets	Ball et al.	2016	JFE	op_at	funda			op_at	Opa	A.4.15	OperProfRD	JKP's numerator is different from HXZ's. We follow JKP.	1963	2014
+51	Operating profits-to-lagged assets	Ball et al.	2016	JFE	op_atl1	funda			op_atl1	Ola	A.4.16	OperProfRDLagAT	JKP's numerator is different from HXZ's. We follow JKP.	1963	2014
+52	Operating profits-to-lagged assets (quarterly)	Ball et al.	2016	JFE						Olaq	A.4.17	OperProfRDLagAT_q		1963	2014
+53	Absolute accruals	"Bandyopadhyay, Huang, and Wirjanto"	2010	WP	absacc	funda		absacc						1976	2008
+54	Accrual volatility	"Bandyopadhyay, Huang, and Wirjanto"	2010	WP	stdacc	fundq		stdacc						1976	2008
+55	Market equity	Banz	1981	JFE	market_equity	crspm		mve	market_equity	Me	A.6.1	Size	HXZ use June ME. We use the latest ME following JKP.	1926	1975
+56	Sales to price	"Barbee, Mukherji, and Raines"	1996	FAJ	sale_me	funda		sp	sale_me	Sp	A.2.22	SP		1979	1991
+57	Sales to price (quarterly)	"Barbee, Mukherji, and Raines"	1996	FAJ						Spq	A.2.23	SP_q		1979	1991
+58	Number of consecutive quarters with earnings increases	"Barth, Elliott, and Finn"	1999	JAR	ni_inc8q	fundq	9	nincr	ni_inc8q	Nei	A.1.10	NumEarnIncrease	"JKP use yearly earnings increase (ib). We use quarterly earnings increase (ibq) following the original definition.
+In CZ, the reference is Loh and Warachka (2012)."	1982	1992
+59	Earnings to price	Basu	1977	JF	ni_me	funda		ep	ni_me	Ep	A.2.9	EP		1963	1971
+60	Earnings to price (quarterly)	Basu	1977	JF						Epq	A.2.10	EPq		1963	1971
+61	Forecasted growth in 5-year EPS	Bauman and Dowen	1988	FAJ				fgr5yr							
+62	Inventory growth	Belo and Lin	2012	RFS	inv_gr1	funda			inv_gr1	Ivg	A.3.14	InvGrowth		1965	2009
+63	Brand capital to assets	"Belo, Lin and Vitorino"	2014	RED						Bca	A.5.12	BrandCapital		1975	2010
+64	Employment growth	"Belo, Lin, and Bazdresch"	2014	JPE	emp_gr1	funda		hire	emp_gr1	Hn	A.5.10	hire	GHZ use emp_t-1 instead of two-year average. We use the average.	1965	2010
+65	Debt to market	Bhandari	1988	JFE	debt_me	funda		lev	debt_me	Dm	A.2.4	Leverage	We follow JKP's implementation.	1952	1981
+66	Debt to market (quarterly)	Bhandari	1988	JFE						Dmq	A.2.5	Leverage_q		1952	1981
+67	12 month residual momentum	"Blitz, Huij, and Martens"	2011	JEF	resff3_12_1	crspm			resff3_12_1	epsilon12	A.1.13	ResidualMomentum		1930	2009
+68	6 month residual momentum	"Blitz, Huij, and Martens"	2011	JEF	resff3_6_1	crspm			resff3_6_1	epsilon6	A.1.12	ResidualMomentum6m		1930	2009
+69	Change in operating cash flow to assets	Bouchard et al.	2019	JF	ocf_at_chg1	funda			ocf_at_chg1					1990	2015
+70	Operating cash flow to assets	Bouchard et al.	2019	JF	ocf_at	funda			ocf_at					1990	2015
+71	Net payout yield	Boudoukh et al.	2007	JF	eqnpo_me	funda			eqnpo_me	Nop	A.2.16	NetPayoutYield		1984	2003
+72	Net payout yield (quarterly)	Boudoukh et al.	2007	JF						Nopq	A.5.17	NetPayoutYield_q		1984	2003
+73	Payout yield	Boudoukh et al.	2007	JF	eqpo_me	funda			eqpo_me	Op	A.2.16	PayoutYield		1984	2003
+74	Payout yield (quarterly)	Boudoukh et al.	2007	JF						Opq	A.5.17	PayoutYield_q		1984	2003
+75	Net debt finance	"Bradshaw, Richardson, and Sloan"	2006	JAE	dbnetis_at	funda			dbnetis_at	Ndf	A.3.25	NetDebtFinance		1971	2000
+76	Net equity finance	"Bradshaw, Richardson, and Sloan"	2006	JAE	eqnetis_at	funda			eqnetis_at	Nef	A.3.25	NetEquityFinance	JKP do not subtract dv in the numerator. We subtract dv following the original definition.	1971	2000
+77	Net external finance	"Bradshaw, Richardson, and Sloan"	2006	JAE	netis_at	funda			netis_at	Nxf	A.3.25	XFIN	JKP do not subtract dv in the numerator. We subtract dv following the original definition.	1971	2000
+78	Dollar trading volume (JKP)	"Brennan, Chordia, and Subrahmanyam"	1998	JFE	dolvol_126d	crspd			dolvol_126d	Dtv	A.6.13		JKP's implementation using crspd.	1966	1995
+79	"Dollar trading volume (Org, GHZ)"	"Brennan, Chordia, and Subrahmanyam"	1998	JFE	dolvol	crspm		dolvol				DolVol	GHZ's implementation: original definition using crspm.	1966	1995
+80	Return on invested capital	Brown and Rowe	2007	WP	roic	funda		roic				roic		1970	2005
+81	Failure probaility	"Campbell, Hilscher, and Szilagyi"	2008	JF						Fp	A.4.23	FailureProbability		1981	2003
+82	Earnings announcement return	"Chan, Jegadeesh, and Lakonishok"	1996	JF						Abr	A.1.2	AnnouncementReturn	Use IBES.	1977	1992
+83	Revisions in analyst's' earnings forecasts	"Chan, Jegadeesh, and Lakonishok"	1996	JF				chfeps		Re	A.1.3	REV6	"GHZ refer to Hawkins, Chamberlin, and Daniel (1984)"	1977	1992
+84	Advertising expense to market	"Chan, Lakonishok, and Sougiannis"	2001	JF						Adm	A.5.2	AdExp		1975	1995
+85	R&D to market	"Chan, Lakonishok, and Sougiannis"	2001	JF	rd_me	funda		rd_mve	rd_me	Rdm	A.5.4	RD	"Reference in GHZ: Guo, Lev, and Shi (2006)"	1975	1995
+86	R&D to market (quarterly)	"Chan, Lakonishok, and Sougiannis"	2001	JF						Rdmq	A.5.5	RD_q		1975	1995
+87	R&D to sales	"Chan, Lakonishok, and Sougiannis"	2001	JF	rd_sale	funda		rd_sale	rd_sale	Rds	A.5.5	rd_sale	"Reference in GHZ: Guo, Lev, and Shi (2006)"	1975	1995
+88	R&D to sales (quarterly)	"Chan, Lakonishok, and Sougiannis"	2001	JF						Rdsq	A5.6	rd_sale_q		1975	1995
+89	Cash productivity	Chandrashekar and Rao	2009	WP	cashpr	funda		cashpr				CashProd		1963	2003
+90	CAPEX and inventory	Chen and Zhang	2010	JF	invest	funda		invest					Chen and Zhang was retracted.		
+91	Volatility of dollar trading volume (GHZ)	"Chordia, Subrahmanyam, and Anshuman"	2001	JFE	std_dolvol	crspd		std_dolvol					GHZ's implementatin: use 1-month volatility. Original definition uses 36 monthly data.	1966	1995
+92	Volatility of dollar trading volume (JKP)	"Chordia, Subrahmanyam, and Anshuman"	2001	JFE	dolvol_var_126d	crspd			dolvol_var_126d	Cvd	A.6.14	VolSD	JKP's implementation: use 6-month volatility. Original definition uses 36 monthly data.	1966	1995
+93	Volatility of share turnover (GHZ)	"Chordia, Subrahmanyam, and Anshuman"	2001	JFE	std_turn	crspd		std_turn					GHZ's implementatin: use 1-month volatility. Original definition uses 36 monthly data.	1966	1995
+94	Volatility of share turnover (JKP)	"Chordia, Subrahmanyam, and Anshuman"	2001	JFE	turnover_var_126d	crspd			turnover_var_126d	Cvt	A.6.12	std_turn	JKP's implementation: use 6-month volatility. Original definition uses 36 monthly data.	1966	1995
+95	Customer momentum	Cohen and Frazzini	2008	JF						Cm	A.1.16	CustomerMomentum		1980	2004
+96	Segment momentum	Cohen and Lou	2012	JFE						Sm	A.1.14	retConglomerate		1977	2009
+97	Asset growth	"Cooper, Gulen, and Schill"	2008	JF	at_gr1	funda		agr	at_gr1	I/A	A.3.2	AssetGrowth		1968	2003
+98	Asset growth (quarterly)	"Cooper, Gulen, and Schill"	2008	JF						Iaq	A.3.3	AssetGrowth_q		1968	2003
+99	High-low bid-ask spread	Corwin and Schultz	2012	JF	bidaskhl_21d	crspd			bidaskhl_21d	Shl	A.6.28			1927	2006
+100	Disparing between long- and short-term earnings growth forecasts	Da and Warachka	2011	JFE						Dls	A.5.48	EarningsForecastDisparity		1983	2006
+101	"Composite equity issuance (JKP, 12 months)"	Daniel and Titman	2006	JF	eqnpo_12m	crspm			eqnpo_12m				JKP's definition using 1-year lag (as used in Stambaugh and Yuan (2016)). We multiply JKP's eqnpo_12m by -1 to make it consistent with the original definition.	1968	2003
+102	Composite equity issuance (Org)	Daniel and Titman	2006	JF	eqnpo_60m	crspm				Cei	A.3.12	CompEquIss	Original definition using 5-year lag.	1968	2003
+103	Intangible return	Daniel and Titman	2006	JF						Ir	A.2.26	IntanBM		1968	2003
+104	Share turnover (JKP)	"Datar, Naik, and Radcliffe"	1998	JFM	turnover_126d	crspd			turnover_126d	Tur	A.6.11		JKP's implementation using crspd.	1963	1991
+105	"Share turnover (Org, GHZ)"	"Datar, Naik, and Radcliffe"	1998	JFM	turn	crspm		turn				ShareVol	GHZ's implementation (original definition) using crspm.	1963	1991
+106	Long-term reversal (12-36)	De Bondt and Thaler	1985	JF	ret_36_12	crspm		mom36m				LRreversal		1929	1982
+107	Long-term reversal (12-60)	De Bondt and Thaler	1985	JF	ret_60_12	crspm			ret_60_12	Rev	A.2.8			1929	1982
+108	Equity duration	"Dechow, Sloan, and Soliman"	2004	RAS	eq_dur	funda			eq_dur	Dur	A.2.30	EquityDuration		1962	1998
+109	Operating Cash flows to price (JKP)	"Desai, Rajgopal, and Venkatachalam"	2004	AR	ocf_me	funda			ocf_me	Ocp	A.2.24		JKP's implementation: subtle differences in filling missing values.	1973	1997
+110	"Operating Cash flows to price (Org, GHZ)"	"Desai, Rajgopal, and Venkatachalam"	2004	AR	cfp	funda		cfp				cfp	GHZ's implementation: original definition	1973	1997
+111	Operating Cash flows to price (quarterly)	"Desai, Rajgopal, and Venkatachalam"	2004	AR						Ocpq	A.2.25	cfpq		1973	1997
+112	Altman Z-score	Dichev	1998	JF	z_score	funda			z_score	Z	A.4.26	ZScore	JKP prefer ebitda to oiadp. We follow JKP.	1981	1995
+113	Altman Z-score (quarterly)	Dichev	1998	JF						Zq	A.4.27	ZScore_q		1981	1995
+114	Ohlson O-score	Dichev	1998	JF	o_score	funda			o_score	O	A.4.24	OScore		1981	1995
+115	Ohlson O-Score (quarterly)	Dichev	1998	JF						Oq	A.4.25	OScore_q		1981	1995
+116	Credit Rating Downgrade	Dichev and Piotroski	2001	JF						Cr	A.4.28	CredRatDG	"In HXZ, the reference is Avramov et al. (2009)."	1986	1998
+117	Dispersion in analysts' earnings forecasts	"Diether, Malloy, and Scherbina"	2002	JF				disp		Dis	A.5.49	ForecastDispersion		1976	2000
+118	Dimson Beta	Dimson	1979	JFE	beta_dimson_21d	crspd			beta_dimson_21d	BD	A.6.10	BetaDimson		1955	1974
+119	Probability of informed trading	"Easley, Hvidkjaer, and O'Hara"	2002	JF						Pin	A.6.32	ProbInformedTrading		1984	1998
+120	Unexpected R&D increase	"Eberhart, Maxwell, and Siddique"	2004	JF	rd	funda	2	rd				SurpriseRD	"The original paper uses four conditions to define the indicator variable, while GHZ use only one of them. We follow the original definition."	1974	2001
+121	Industry-adjusted organizational capital	Eisfeldt and Papanikolaou	2013	JF				orgcap		Ioca	A.5.1	OrgCap	This requires consumer price index.	1970	2008
+122	Organization capital/assets	Eisfeldt and Papanikolaou	2013	JF						Oca	A.5.1	OrgCapNoAdj		1970	2008
+123	Analysts coverage	"Elgers, Lo, and Pfeiffer"	2001	AR				nanalyst		Ana	A.5.26	nanalyst		1982	1998
+124	Analysts' earnings forecast-to-price	"Elgers, Lo, and Pfeiffer"	2001	AR				sfe		Efp	A.2.11	sfe		1982	1998
+125	Change in long-term net operating assets	"Fairfield, Whisenant, and Yohn"	2003	AR	lnoa_gr1a	funda		grltnoa	lnoa_gr1a	dLno	A.3.6	GrLTNOA	JKP appear to be incorrect: take diff of dp in the numerator and use sum(at) instead of avg(at) in denominator. We correct these following the original definition.	1964	1993
+126	Assets-to-market	Fama and French	1992	JF	at_me	funda			at_me	Am	A.2.6	AM		1963	1990
+127	Assets-to-market (quarterly)	Fama and French	1992	JF						Amq	A.2.7	AMq		1963	1990
+128	Book leverage	Fama and French	1992	JF	at_be	funda			at_be	Bl	A.4.32	BookLeverage		1963	1990
+129	Book leverage (quarterly)	Fama and French	1992	JF						Blq	A.4.33	BookLeverageQuarterly		1963	1990
+130	"Operating profits to book equity (GHZ, Org)"	Fama and French	2006	JFE	operprof	funda		operprof				OperProf	"This is the original definition. GHZ use lag(ceq), but we use ceq following the original definition."	1977	2003
+131	Operating profits to book equity (JKP)	Fama and French	2006	JFE	ope_be	funda			ope_be	Ope	A.4.12		"JKP's implementation. JKP follow HXZ, but the numerator is different. In HXZ, the numerator is the same as the original definition, but the denominator is different."	1977	2003
+132	Operating profits to lagged book equity	Fama and French	2006	JFE	ope_bel1	funda			ope_bel1	Ole	A.4.13	OperProfLag	"JKP's implementation. JKP follow HXZ, but the numerator is different. In HXZ, the numerator is the same as the original definition, but the denominator is different."	1977	2003
+133	Operating profits to lagged equity (quarterly)	Fama and French	2006	JFE						Oleq	A.4.14	OperProfLag_q		1977	2003
+134	Beta squared (GHZ)	Fama and MacBeth	1973	JPE	betasq	crspd		betasq				BetaSquared	GHZ's implementation: use weekly returns (without subtracting risk-free rate).	1929	1968
+135	Market beta  (GHZ)	Fama and MacBeth	1973	JPE	beta	crspd		beta		B1	A.6.8	Beta	GHZ's implementation: use weekly returns (without subtracting risk-free rate).	1929	1968
+136	"Market beta (Org, JKP)"	Fama and MacBeth	1973	JPE	beta_60m	crspm			beta_60m	B1	A.6.8	Beta	JKP's implementation: follow the original definition and use monthly returns.	1929	1968
+137	Earnings surprise	"Foster, Olsen, and Shevlin"	1984	AR	niq_su	fundq			niq_su	Sue	A.1.1	EarningsSurprise	JKP use ibq instead of epspxq. We use epspxq following the original definition. HXZ's definition of surprise is different.	1974	1981
+138	Earnings conservatism	Francis et al.	2004	AR						Ecs	A.5.44	EarningsConservatism		1975	2001
+139	Earnings persistence	Francis et al.	2004	AR	ni_ar1	funda			ni_ar1	Eper	A.5.41	EarningsPersistence	"JKP use ni/at as split-adjusted EPS, while the original definitin and HXZ use epspx/ajex. We follow JKP."	1975	2001
+140	Earnings predictability	Francis et al.	2004	AR	ni_ivol	funda			ni_ivol	Eprd	A.5.41	EarningsPredictability	"JKP use ni/at as split-adjusted EPS, while the original definitin and HXZ use epspx/ajex. We follow JKP."	1975	2001
+141	Earnings smoothness	Francis et al.	2004	AR	earnings_variability	funda			earnings_variability	Esm	A.5.42	EarningsSmoothness		1975	2001
+142	Earnings timeliness	Francis et al.	2004	AR						Etl	A.5.44	EarningsTimeliness		1975	2001
+143	ROA volatility	Francis et al.	2004	AR	roavol	fundq		roavol				roavol		1975	2001
+144	Value relevance of earnings	Francis et al.	2004	AR						Evr	A.5.43	EarningsValueRelevance		1975	2001
+145	Accrual quality	Francis et al.	2005	JAE						Acq	A.5.39	AccrualQuality		1971	2002
+146	Analysts optimism	Frankel and Lee	1998	JAE						Aop	A.5.13	AOP		1975	1993
+147	Analysts-based intrinsic value-to-market	Frankel and Lee	1998	JAE						Vfp	A.2.27	AnalystValue		1975	1993
+148	Intrinsic value-to-market	Frankel and Lee	1998	JAE	intrinsic_value	funda			intrinsic_value	Vhp	A.2.27	IntrinsicValue		1975	1993
+149	Predicted analysts focecast error	Frankel and Lee	1998	JAE						Pafe	A.5.14	PredictedFE		1975	1993
+150	Pension funding rate (scaled by market equity)	Franzoni and Marin	2006	JF						Frm	A.5.45	FR		1980	2002
+151	Persion funding rate (scaled by assets)	Franzoni and Marin	2006	JF						Fra	A.5.45	FRbook		1980	2002
+152	Frazzini-Pedersen beta	Frazzini and Pedersen	2014	JFE	betabab_1260d	crspd			betabab_1260d	BFP	A.6.9	BetaFP		1929	2012
+153	52-week high	George and Hwang	2004	JF	prc_highprc_252d	crspd			prc_highprc_252d	52w	A.1.11	High52		1963	2001
+154	Change in 6-month momentum	Gettleman and Marks	2006	WP	chmom	crspm		chmom						1926	2003
+155	Corporate governance index	"Gompers, Ishii, and Metrick"	2003	QJE						Gind	A.5.38	Governance		1990	1999
+156	Percent discretionary accruals	"Hafzalla, Lundholm, and Van Winkle"	2011	AR						Pda	A.3.24	AbnormalAccrualsPercent		1989	2008
+157	"Percent operating accruals (GHZ, Org)"	"Hafzalla, Lundholm, and Van Winkle"	2011	AR	pctacc	funda		pctacc		Poa	A.3.22	PctAcc	This GHZ version is the same as the original definition and closer to HXZ's definition.	1989	2008
+158	Percent operating accruals (JKP)	"Hafzalla, Lundholm, and Van Winkle"	2011	AR	oaccruals_ni	funda			oaccruals_ni				JKP version: both numerator and denominator are different from the original definition.	1989	2008
+159	Percent total accruals	"Hafzalla, Lundholm, and Van Winkle"	2011	AR	taccruals_ni	funda			taccruals_ni	Pta	A.3.23	PctTotAcc	"We follow JKP, which is slightly different from HXZ."	1989	2008
+160	Tangibility	Hahn and Lee	2009	JF	tangibility	funda		tang	tangibility	Tan	A.5.27	tang		1973	2001
+161	Tangibility (quarterly)	Hahn and Lee	2009	JF						Tanq	A.5.28	tang_q		1973	2001
+162	Trend factor	"Han, Zhou, and Zhu"	2016	JFE	trend_factor	crspd								1926	2014
+163	Coskewness	Harvey and Siddique	2000	JF	coskew_21d	crspd			coskew_21d	Cs	A.6.23	Coskewness		1964	1993
+164	Capital turnover	Haugen and Baker	1996	JFE	at_turnover	funda			at_turnover	Cto	A.4.6	CapTurnover	"HXZ use at at t-1, while JKP use the average of at at t-1 and t-2, which is the original definition. We follow JKP."	1979	1993
+165	Capital turnover (quarterly)	Haugen and Baker	1996	JFE						Ctoq	A.4.8	CapTurnover_q		1979	1993
+166	Cash flow-to-price volatility	Haugen and Baker	1996	JFE								VarCF		1979	1993
+167	Return on equity	Haugen and Baker	1996	JFE	ni_be	funda			ni_be			RoE		1979	1993
+168	Analysts' forecast change	"Hawkins, Chamberlin, and Daniel"	1984	FAJ						dEf	A.1.9	AnalystRevision		1975	1980
+169	"Year 1-lagged return, annual"	Heston and Sadka	2008	JFE	seas_1_1an	crspm			seas_1_1an	R1a	A.5.51	MomSeasonShort		1965	2002
+170	"Year 1-lagged return, nonannual"	Heston and Sadka	2008	JFE	seas_1_1na	crspm			seas_1_1na	R1n	A.5.51	Mom12mOffSeason		1965	2002
+171	"Years 11-15 lagged returns, annual"	Heston and Sadka	2008	JFE	seas_11_15an	crspm			seas_11_15an	"R[11, 15] a"	A.5.51	MomSeason11YrPlus		1965	2002
+172	"Years 11-15 lagged returns, nonannual"	Heston and Sadka	2008	JFE	seas_11_15na	crspm			seas_11_15na	"R[11, 15] n"	A.5.51	MomOffSeason11YrPlus		1965	2002
+173	"Years 16-20 lagged returns, annual"	Heston and Sadka	2008	JFE	seas_16_20an	crspm			seas_16_20an	"R[16, 20] a"	A.5.51	MomSeason16YrPlus		1965	2002
+174	"Years 16-20 lagged returns, nonannual"	Heston and Sadka	2008	JFE	seas_16_20na	crspm			seas_16_20na	"R[16, 20] n"	A.5.51	MomOffSeason16YrPlus		1965	2002
+175	"Years 2-5 lagged returns, annual"	Heston and Sadka	2008	JFE	seas_2_5an	crspm			seas_2_5an	"R[2, 5] a"	A.5.51	MomSeason		1965	2002
+176	"Years 2-5 lagged returns, nonannual"	Heston and Sadka	2008	JFE	seas_2_5na	crspm			seas_2_5na	"R[2, 5] n"	A.5.51	MomOffSeason		1965	2002
+177	"Years 6-10 lagged returns, annual"	Heston and Sadka	2008	JFE	seas_6_10an	crspm			seas_6_10an	"R[6, 10] a"	A.5.51	MomSeason06YrPlus		1965	2002
+178	"Years 6-10 lagged returns, nonannual"	Heston and Sadka	2008	JFE	seas_6_10na	crspm			seas_6_10na	"R[6, 10] n"	A.5.51	MomOffSeason06YrPlus		1965	2002
+179	Citations to R&D expenses	"Hirschleifer, Hsu, and Li"	2013	JFE						Crd	A.5.16	CitationsRD		1982	2008
+180	Patents to R&D expenses	"Hirschleifer, Hsu, and Li"	2013	JFE						Parc	A.5.15	PatentsRD		1982	2008
+181	Change in net operating assets	Hirshleifer et al.	2004	JAE	noa_gr1a	funda			noa_gr1a	dNoa	A.3.5	dNoa	JKP doc appears to have a typo (code is right): divide by at at t not t-1.	1964	2002
+182	Net operating assets	Hirshleifer et al.	2004	JAE	noa_at	funda			noa_at	Noa	A.3.5	NOA	JKP doc appears to have a typo (code is right): divide by at at t not t-1.	1964	2002
+183	Change in depreciation to PP&E	Holthausen and Larcker	1992	JAE	pchdepr	funda		pchdepr				pchdepr		1978	1988
+184	Depreciation to PP&E	Holthausen and Larcker	1992	JAE	depr	funda		depr				depr		1978	1988
+185	Sin stock	Hong and Kacperczyk	2009	JFE	sin	funda	2	sin				sinAlgo		1926	2006
+186	Industry lead-lag effect in earnings surprises	Hou	2007	RFS						Ile	A.1.15	EarnSupBig		1972	2001
+187	Industry lead-lag effect in prior returns	Hou	2007	RFS						Ilr	A.1.15	IndRetBig		1972	2001
+188	Bid-ask spread (TAQ)	Hou and Loh 	2016	JFE						Sba	A.6.29	BidAskTAQ		1963	2012
+189	Price delay based on R-squared	Hou and Moskowitz	2005	RFS	pricedelay	crspd		pricedelay		D1	A.5.19	PriceDelayRsq		1964	2001
+190	Price delay based on SE-adjusted slopes	Hou and Moskowitz	2005	RFS						D3	A.5.19	PriceDelayTstat		1964	2001
+191	Price delay based on slopes	Hou and Moskowitz	2005	RFS	pricedelay_slope	crspd				D2	A.5.19	PriceDelaySlope		1964	2001
+192	Industry concentration (book equity)	Hou and Robinson	2006	JF	herf_be	funda				He	A.5.17	HerfBE		1963	2001
+193	Industry concentration (sales)	Hou and Robinson	2006	JF	herf_sale	funda		herf		Hs	A.5.17	Herf		1963	2001
+194	Industry concentration (total assets)	Hou and Robinson	2006	JF	herf_at	funda				Ha	A.5.17	HerfAsset		1963	2001
+195	Return on equity (quarterly)	"Hou, Xue, and Zhang"	2015	RFS	niq_be	fundq		roeq	niq_be	Roe	A.4.1		We only use fundq while hxz supplement the data with funda when fundq is missing.	1972	2012
+196	Cash flow volatility	Huang	2009	JEF	ocfq_saleq_std	fundq		stdcf	ocfq_saleq_std	Vcf	A.5.36		"JKP's implementation. GHZ's version is a bit differernt. 
+CZ map this to their VarCF but the reference and defition are different. This is volatility of cash flow to sales, whereas VarCF is volatility of cash flow to price. The reference in CZ is Haugen and Baker (1996)."	1980	2004
+197	Short-term reversal	Jegadeesh	1990	JF	ret_1_0	crspm		mom1m	ret_1_0	Srev	A.6.26	STreversal		1929	1982
+198	Revenue surprise	Jegadeesh and Livnat	2006	JFE	saleq_su	fundq			saleq_su	Rs	A.1.7	RevenueSurprise	JKP use saleq instead of saleq/cshprq. We use saleq/cshprq following the original definition. HXZ's definition is also different from the original definition and that of JKP.	1987	2003
+199	Momentum (12 month)	Jegadeesh and Titman	1993	JF	ret_12_1	crspm		mom12m	ret_12_1	R11	A.1.5	Mom12m		1964	1989
+200	Momentum (3 month)	Jegadeesh and Titman	1993	JF	ret_3_1	crspm			ret_3_1					1964	1989
+201	Momentum (6 month)	Jegadeesh and Titman	1993	JF	ret_6_1	crspm		mom6m	ret_6_1	R6	A.1.4	Mom6m		1964	1989
+202	Momentum (9 month)	Jegadeesh and Titman	1993	JF	ret_9_1	crspm			ret_9_1					1964	1989
+203	Firm age	"Jiang, Lee, and Zhang"	2005	RAS	age	merge		age	age	Age	A.5.18	FirmAge		1965	2001
+204	Revenue surprise (Karma)	Karma	2009	JBFA	rsup	fundq		rsup						1974	2005
+205	Tail risk	Kelly and Jiang	2014	RFS						Tail	A.6.24	BetaTailRisk		1963	2010
+206	Earnings announcement return (Kishore et al.)	Kishore et al.	2008	WP				ear					Use Compustat.		
+207	Long-term EPS forecast	La Porta	1996	JF						Ltg	A.2.31	fgr5yrLag		1983	1990
+208	Long-term EPS forecast (monthly sort)	La Porta	1996	JF						Ltgm	A.2.31	fgr5yrNoLag		1983	1990
+209	Annual sales growth	"Lakonishok, Shleifer, and Vishny"	1994	JF	sale_gr1	funda		sgr	sale_gr1	Sg	A.2.19	sgr		1968	1990
+210	Annual sales growth (quarterly)	"Lakonishok, Shleifer, and Vishny"	1994	JF						Sgq	A.4.34	sgr_q		1968	1990
+211	Cash flow-to-price	"Lakonishok, Shleifer, and Vishny"	1994	JF	fcf_me	funda			fcf_me	Cp	A.2.12	CF		1968	1990
+212	Cash flow-to-price (quarterly)	"Lakonishok, Shleifer, and Vishny"	1994	JF						Cpq	A.2.13	CFq		1968	1990
+213	Five-year sales growth rank	"Lakonishok, Shleifer, and Vishny"	1994	JF						Sr	A.2.18	MeanRankRevGrowth		1968	1990
+214	Three-year sales growth	"Lakonishok, Shleifer, and Vishny"	1994	JF	sale_gr3	funda			sale_gr3					1968	1990
+215	Kaplan-Zingales index	"Lamont, Polk, and Saa-Requejo"	2001	RFS	kz_index	funda			kz_index	Kz	A.5.30	KZ	JKP don't subtract txdb in Tobin's Q. We subtract it following the original definition.	1968	1997
+216	Kaplan-Zingales index (quarterly)	"Lamont, Polk, and Saa-Requejo"	2001	RFS						Kzq	A.5.31	KZ_q		1968	1997
+217	Abnormal volume in earnings announcement month	"Lerman, Livnat, and Mendenhall"	2008	WP				aeavol							
+218	Taxable income to income (JKP)	Lev and Nissim	2004	AR	pi_nix	funda			pi_nix	Tbi	A.4.29	Tax	JKP's implementation: use pre-tax income. No need to update tax rates.	1973	2000
+219	"Taxable income to income (Org, GHZ)"	Lev and Nissim	2004	AR	tb	funda		tb				Tax	GHZ version (original definition). GHZ use tax rates explicitly and adjust by industry. We don’t industry-adjust.	1973	2000
+220	Taxable income to income (quarterly)	Lev and Nissim	2004	AR						Tbiq		Tax_q		1973	2000
+221	R&D capital-to-assets	Li	2011	RFS	rd5_at	funda			rd5_at	Rca		RDcap		1980	2007
+222	Dividend yield (GHZ)	Litzenberger and Ramaswamy	1979	JF	dy	funda		dy					GHZ version: use funda instead of crsp.	1936	1977
+223	Dividend yield (JKP)	Litzenberger and Ramaswamy	1979	JF	div12m_me	crspm			div12m_me	Dp	A.2.14	DivYieldST	"JKP (HXZ) version. This also differs from the original definition: CZ say JKP's definition is closer to that of Keim (1985).
+JKP do not set this to nan when the dividend is 0, whereas we set this to nan following HXZ."	1936	1977
+224	Dividend yield (quarterly)	Litzenberger and Ramaswamy	1979	JF						Dpq	A.2.15			1936	1977
+225	Zero-trading days (1 month)	Liu	2006	JFE	zero_trades_21d	crspd		zerotrade	zero_trades_21d	Lm1	A.6.17	zerotradeAlt1	JKP use turnover in case of an equal number of zero trading days. We follow the original paper and add constant * 1/ turnover to the measure.	1960	2003
+226	Zero-trading days (12 months)	Liu	2006	JFE	zero_trades_252d	crspd			zero_trades_252d	Lm12	A.6.17	zerotradeAlt12	JKP use turnover in case of an equal number of zero trading days. We follow the original paper and add constant * 1/ turnover to the measure.	1960	2003
+227	Zero-trading days (6 months)	Liu	2006	JFE	zero_trades_126d	crspd			zero_trades_126d	Lm6	A.6.17	zerotrade	JKP use turnover in case of an equal number of zero trading days. We follow the original paper and add constant * 1/ turnover to the measure.	1960	2003
+228	Growth in advertising expenses	Lou	2014	RFS						gAd	A.5.3	GrAdExp		1974	2010
+229	Initial public offerings	Loughran and Ritter	1995	JF	ipo	crspm	2	IPO						1970	1990
+230	Enterprise multiple	Loughran and Wellman	2011	JFQA	enterprise_multiple	funda				Em	A.2.20	EntMult	This is the original definition. CZ add dc and omit pstkrv in enterprise value.	1963	2009
+231	Enterprise multiple (JKP)	Loughran and Wellman	2011	JFQA	ebitda_mev	funda			ebitda_mev				"JKP version. JKP omit pstkrv in enterprise value and use ebitda as the operating income instead of oibdp. Also, ebitda_mev is defined as ebitda / mev, which is 1/ enterprise multiple. "	1963	2009
+232	Enterprise multiple (quarterly)	Loughran and Wellman	2011	JFQA						Emq	A.2.21	EntMult_q		1963	2009
+233	Changes in PPE and inventory/assets	"Lyandres, Sun, and Zhang"	2008	RFS	ppeinv_gr1a	funda			ppeinv_gr1a	dPia	A.3.4	InvestPPEInv		1970	2005
+234	Composite debt issuance	"Lyandres, Sun, and Zhang"	2008	RFS	debt_gr3	funda			debt_gr3	Cdi	A.3.13	CompositeDebtIssuance	"JKP use 3-year percentage change, while the original definition is 5-year growth rate. We follow the original definition."	1970	2005
+235	Customer industries momentum	Menzly and Ozbas	2010	JF						Cim	A.1.17	iomom_cust		1986	2005
+236	Supplier industries momentum	Menzly and Ozbas	2010	JF						Sim	A.1.17	iomom_supp		1986	2005
+237	Dividend initiation	"Michaely, Thaler, and Womack"	1995	JF	divi	crspm	2	divi				DivInit	We follow CZ (a slight variation of the OP). GHZ use funda and their definition is different from OP.	1964	1988
+238	Dividend omission	"Michaely, Thaler, and Womack"	1995	JF	divo	crspm	2	divo				DivOmit	We follow CZ (a slight variation of the OP). GHZ use funda and their definition is different from OP.	1964	1988
+239	Share price	Miller and Scholes	1982	JPE	price	crspm			price	Pps	A.6.15		We change JKP's alias 'prc' to 'price' as 'prc' exists in crspm.	1940	1978
+240	Mohanram G-score	Mohanram	2005	RAS				ms		G	A.4.31	MS		1978	2001
+241	Industry momentum 	Moskowitz and Grinblatt	1999	JFE	indmom	crspm		indmom		Im	A.1.6	IndMom	Market-cap weighted average of 6-month returns following the original definition. GHZ uses equal-weight average of 12-month momentum. HXZ use 49 FF industry classification rather than the first two-digits of SIC code.	1963	1995
+242	Operating leverage	Novy-Marx	2011	JFE	opex_at	funda			opex_at	Ol	A.5.8	OPLeverage	JKP use xopr instead of (cogs + xsga). We follow JKP.	1963	2008
+243	Operating leverage (quarterly)	Novy-Marx	2011	JFE						Olq	A.5.9	OPLeverage_q		1963	2008
+244	Intermediate momentum (7-12)	Novy-Marx	2012	ROF	ret_12_6	crspm			ret_12_7			IntMom	JKP compute 5-month return (t-7 to t-12) not 6-month return (t-6 to t-12). We use 6-month return.	1927	2010
+245	Gross profits-to-assets	Novy-Marx	2013	JFE	gp_at	funda			gp_at	Gpa	A.4.9	GP	"JKP use gp or (sale-cogs) for growth profit, while HXZ and GHZ use revt-cogs. We follow JKP."	1963	2010
+246	Gross profits-to-lagged assets	Novy-Marx	2013	JFE	gp_atl1	funda		gma	gp_atl1	Gla	A.4.10	GPlag	"JKP use gp or (sale-cogs) for growth profit, while HXZ and GHZ use revt-cogs. We follow JKP."	1963	2010
+247	Gross profits-to-lagged assets (quarterly)	Novy-Marx	2013	JFE						Glaq	A.4.11	GPlag_q		1963	2010
+248	Asset liquidity to book assets	Ortiz-Molina and Phillips	2014	JFQA	aliq_at	funda			aliq_at	Ala	A.5.46	AssetLiquidityBook	JKP don't subtract gdwl since it's already included in intangibles. We follow JKP.	1984	2006
+249	Asset liquidity to book assets (quarterly)	Ortiz-Molina and Phillips	2014	JFQA						Alaq	A.5.47	AssetLiquidityBookQuart		1984	2006
+250	Asset liquidity to market assets	Ortiz-Molina and Phillips	2014	JFQA	aliq_mat	funda			aliq_mat	Alm	A.5.46	AssetLiquidityMarket	JKP don't subtract gdwl since it's already included in intangibles. We follow JKP.	1984	2006
+251	Asset liquidity to market assets (quarterly)	Ortiz-Molina and Phillips	2014	JFQA						Almq	A.5.47	AssetLiquidityMarketQuart		1984	2006
+252	Cash flow-to-debt	Ou and Penman	1989	JAR	cashdebt	funda		cashdebt				cashdebt		1973	1983
+253	Change in current ratio	Ou and Penman	1989	JAR	pchcurrat	funda		pchcurrat				pchcurrat		1973	1983
+254	Change in quick ratio	Ou and Penman	1989	JAR	pchquick	funda		pchquick				pchquick		1973	1983
+255	Change in sales to inventory	Ou and Penman	1989	JAR	pchsaleinv	funda		pchsaleinv				pchsaleinv		1973	1983
+256	Current ratio	Ou and Penman	1989	JAR	currat	funda		currat				currat		1973	1983
+257	Quick ratio	Ou and Penman	1989	JAR	quick	funda		quick				quick		1973	1983
+258	Sales-to-cash	Ou and Penman	1989	JAR	salecash	funda		salecash				salecash		1973	1983
+259	Sales-to-inventory	Ou and Penman	1989	JAR	saleinv	funda		saleinv				saleinv		1973	1983
+260	Sales-to-receivables	Ou and Penman	1989	JAR	salerec	funda		salerec				salerec		1973	1983
+261	Cash-to-assets	Palazzo	2012	JFE	cash_at	funda		cash	cash_at	Cta	A.5.37	Cash		1972	2009
+262	Pastor-Stambaugh liquidity beta	Pastor and Stambaugh	2003	JPE						BPS		BetaLiquidityPS		1968	1999
+263	Book-to-market enterprise value	"Penman, Richardson, and Tuna"	2007	JAR	bev_mev	funda			bev_mev	Ebp	A.2.28	EBM		1963	2001
+264	Book-to-market enterprise value (quarterly)	"Penman, Richardson, and Tuna"	2007	JAR						Ebpq	A.2.29	EBM_q		1963	2001
+265	Net debt-to-price	"Penman, Richardson, and Tuna"	2007	JAR	netdebt_me	funda			netdebt_me	Ndp	A.2.28	NetDebtPrice		1963	2001
+266	Net debt-to-price (quarterly)	"Penman, Richardson, and Tuna"	2007	JAR						Ndpq	A.2.29	NetDebtPrice_q		1963	2001
+267	"Piotroski F-score (GHZ, Org)"	Piotroski	2000	AR	ps	funda		ps				PS	GHZ version: closer to the original definition	1976	1996
+268	Piotroski F-score (JKP)	Piotroski	2000	AR	f_score	funda			f_score	F	A.4.21		JKP version: follow HXZ but there are minor differences (mistakes). See the comments in the code.	1976	1996
+269	Piotroski F-score (quarterly)	Piotroski	2000	AR						Fq	A.4.22	PS_q		1976	1996
+270	Net stock issues (GHZ)	Pontiff and Woodgate	2008	JF	chcsho	funda		chcsho		Nsi	A.3.10		GHZ version: use funda. HXZ also use funda.	1970	2003
+271	"Net stock issues (JKP, Org)"	Pontiff and Woodgate	2008	JF	chcsho_12m	crspm			chcsho_12m			ShareIss1Y	JKP version: use crspm.	1970	2003
+272	Order backlog	"Rajgopal, Shevlin, and Venkatachalam"	2003	RAS						Ob		OrderBacklog		1981	1999
+273	Unexpected quarterly earnings 	"Rendelman, Jones, and Latane"	1982	JFE				sue							
+274	Chage in common equity	Richardson et al.	2005	JAE	be_gr1a	funda		egr	be_gr1a	dBe	A.3.20	DelEqu	GHZ use ceq_t-1 as denominator instead of avg(asset). JKP use their definition of book equity instead of ceq. We follow JKP but use avg(at) rather than at.	1962	2001
+275	Chagne in long-term investments 	Richardson et al.	2005	JAE	lti_gr1a	funda			lti_gr1a	dLti	A.3.20	DelLTI	There are too many missing values and not enough unique values to make decile portfolios.	1962	2001
+276	Change in current Ooperating liabilities	Richardson et al.	2005	JAE	col_gr1a	funda			col_gr1a	dCol	A.3.18	DelCOL		1962	2001
+277	Change in current operating assets	Richardson et al.	2005	JAE	coa_gr1a	funda			coa_gr1a	dCoa	A.3.18	DelCOA		1962	2001
+278	Change in financial liabilities	Richardson et al.	2005	JAE	fnl_gr1a	funda			fnl_gr1a	dFnl	A.3.20	DelFINL	JKP use pstkrv instead of pstk and 'at' at t. we use average 'at' over t and t-1.	1962	2001
+279	Change in long-term debt	Richardson et al.	2005	JAE	lgr	funda		lgr					"GHZ version: diff(lt)/lt. The original definition seems to be diff(lt)/at, but we keep the GHZ's implementation."	1962	2001
+280	Change in net financial assets	Richardson et al.	2005	JAE	nfna_gr1a	funda			nfna_gr1a	dFin	A.3.20	DelNetFin		1962	2001
+281	Change in net non-cash working capital	Richardson et al.	2005	JAE	cowc_gr1a	funda			cowc_gr1a	dWc	A.3.18			1962	2001
+282	Change in net non-current operating assets	Richardson et al.	2005	JAE	nncoa_gr1a	funda			nncoa_gr1a	dNco	A.3.19		"HXZ divide by at at t-1, while JKP use at at t. We follow JKP."	1962	2001
+283	Change in non-current operating assets	Richardson et al.	2005	JAE	ncoa_gr1a	funda			ncoa_gr1a	dNca	A.3.19		"HXZ divide by at at t-1, while JKP use at at t. We follow JKP."	1962	2001
+284	Change in non-current operating liabilities	Richardson et al.	2005	JAE	ncol_gr1a	funda			ncol_gr1a	dNcl	A.3.19		"HXZ divide by at at t-1, while JKP use at at t. We follow JKP."	1962	2001
+285	Change in short-term investments	Richardson et al.	2005	JAE	sti_gr1a	funda			sti_gr1a	dSti	A.3.20	DelSTI		1962	2001
+286	Total accruals	Richardson et al.	2005	JAE	taccruals_at	funda			taccruals_at	Ta	A.3.17	TotalAccruals		1962	2001
+287	"Book to market (December ME, quarterly)"	"Rosenberg, Reid, and Lanstein"	1985	JF						Bmq	A.2.3	BMq		1973	1984
+288	Book-to-market (December ME)	"Rosenberg, Reid, and Lanstein"	1985	JF	be_me	funda		bm	be_me	Bm	A.2.1	BM	We follow JKP's implementation.	1973	1984
+289	Change in analyst coverage	Scherbina	2008	ROF				chnanalyst				ChNAnalyst		1982	2005
+290	"Operating accruals (GHZ, Org)"	Sloan	1996	AR	acc	funda		acc		Oa	A.3.16	Accruals	GHZ version: original definition.	1962	1991
+291	Operating accruals (JKP)	Sloan	1996	AR	oaccruals_at	funda			oaccruals_at				"JKP version: numerator is a bit differernt from the original definition. JKP use at in the denominator, but Sloan uses two-year average. We follow Sloan."	1962	1991
+292	Asset turnover	Soliman	2008	AR	sale_bev	funda			sale_bev	Ato	A.4.5	AssetTurnover		1984	2002
+293	Asset turnover (quarterly)	Soliman	2008	AR						Atoq	A.4.7	AssetTurnover_q		1984	2002
+294	Change in asset turnover	Soliman	2008	AR	chatoia	funda		chatoia				ChAssetTurnover	GHZ adjust for indusry but the original paper doesn't. we follow the original definition.	1984	2002
+295	Change in profit margin	Soliman	2008	AR	chpmia	funda		chpmia				ChPM	GHZ adjust for indusry but the original paper doesn't. we follow the original definition.	1984	2002
+296	Profit margin	Soliman	2008	AR	ebit_sale	funda			ebit_sale	Pm	A.4.5	PM		1984	2002
+297	Profit margin (quarterly)	Soliman	2008	AR						Pmq	A.4.7	PM_q		1984	2002
+298	Return on net operating assets	Soliman	2008	AR	ebit_bev	funda			ebit_bev	Rna	A.4.5	RetNOA		1984	2002
+299	Return on net operating assets (quarterly)	Soliman	2008	AR						Rnaq	A.4.7	RetNOA_q		1984	2002
+300	Mispricing factor: Management	Stambaugh and Yuan	2017	RFS	mispricing_mgmt	merge			mispricing_mgmt					1967	2013
+301	Mispricing factor: Performance	Stambaugh and Yuan	2017	RFS	mispricing_perf	merge			mispricing_perf					1967	2013
+302	Inventory change	Thomas and Zhang	2002	RAS	inv_gr1a	funda		chinv	inv_gr1a	Ivc	A.3.15	ChInv	"JKP use at at t., while we use two-year average of at following the original definition."	1970	1997
+303	Tax expense surprise	Thomas and Zhang	2011	JAR	chtx	fundq		chtx	tax_gr1a	Tes	A.1.8	ChTax	"JKP use tax in funda, but the original definition uses txtq. We follow the original."	1977	2006
+304	Abnormal corporate investment	"Titman, Wei, and Xie"	2004	JFQA	capex_abn	funda		cinvest	capex_abn	Aci		Investment	GHZ's definition is quite differernt. We follow JKP.	1973	1996
+305	Real estate holdings	Tuzel	2010	RFS	realestate	funda		realestate		Rer	A.5.29	realestate	GHZ don't adjust for industry and remove industries with fewer than 5 firms. We adjust for industry and account for the number of firms.	1971	2005
+306	Convertible debt indicator	Valta	2016	JFQA	convind	funda	2	convind				ConvDebt		1985	2012
+307	Convertible debt-to-total debt	Valta	2016	JFQA						Cdd	A.5.35			1985	2012
+308	Secured debt indicator	Valta	2016	JFQA	securedind	funda	2	securedind				securedind		1985	2012
+309	Secured debt-to-total debt	Valta	2016	JFQA	secured	funda		secured		Sdd	A.5.34	secured	"GHZ use dltt for the denominator instead of (dltt + dlc). We use (dltt + dlc) following the original definition.
+There are too many missing values and not enough unique values to make decile portfolios."	1985	2012
+310	Whited-Wu index	Whited and Wu	2006	RFS						Ww	A.5.32	WW		1975	2001
+311	Whited-Wu index (quarterly)	Whited and Wu	2006	RFS						Wwq	A.5.33	WW_Q		1975	2001
+312	CAPEX growth (1 year)	Xie	2001	AR	capx_gr1	funda			capx_gr1	Ig	A.3.7			1971	1992
+313	Discretionay accruals	Xie	2001	AR						Dac	A.3.21	AbnormalAccruals		1971	1992
