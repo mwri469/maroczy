@@ -8,6 +8,7 @@ dist/
 venv/
 .ipynb_checkpoints/
 *.duckdb
+*.duckdb.wal
 *.db
 .env
 .vscode/
@@ -15,4 +16,4 @@ venv/
 *.log
 .pytest_cache/
 .ruff_cache/
-data/cache/
+**/data/cache/
