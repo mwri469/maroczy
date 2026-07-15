@@ -1,10 +1,9 @@
-"""Daily price/volume characteristics (CSV ``class == "crspd"``).
+"""Daily price/volume characteristics.
 
 All functions take an OHLCV DataFrame (columns ``open, high, low, close,
-volume``, indexed by date) -- the exact shape returned by
-:meth:`maroczy.broker.data.MarketData.history`. Functions requiring the
-market portfolio's returns accept an aligned ``mkt_ret: pd.Series`` keyword;
-functions requiring shares outstanding accept ``shares_out``.
+volume``, indexed by date). Functions requiring the market portfolio's
+returns accept an aligned ``mkt_ret: pd.Series`` keyword; functions
+requiring shares outstanding accept ``shares_out``.
 """
 
 from __future__ import annotations

@@ -1,4 +1,4 @@
-"""Characteristics combining price and fundamental data (CSV ``class == "merge"``)."""
+"""Composite characteristics combining price and fundamental data."""
 
 from __future__ import annotations
 

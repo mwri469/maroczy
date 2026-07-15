@@ -1,5 +1,5 @@
-"""IBKR broker integration: connection management, historical/streaming data,
-order execution and a live signal-driven trading loop."""
+"""Production execution via IBKR: connection management, historical/streaming
+data, order execution and a live signal-driven trading loop."""
 
 from maroczy.broker.connection import Broker
 from maroczy.broker.data import MarketData

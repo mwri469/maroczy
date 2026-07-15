@@ -14,7 +14,7 @@ import logging
 
 import pandas as pd
 
-from maroczy.characteristics.functions import get_function
+from maroczy.characteristics.functions import get_function, list_implemented
 from maroczy.characteristics.registry import CharacteristicRegistry
 
 logger = logging.getLogger("maroczy.characteristics.engine")
@@ -30,7 +30,6 @@ class CharacteristicEngine:
         self,
         data,
         names: list[str] | None = None,
-        data_class: str | None = None,
         **extra_kwargs,
     ) -> pd.DataFrame:
         """Compute a batch of characteristics for one security/fundamentals frame.
@@ -38,14 +37,11 @@ class CharacteristicEngine:
         Parameters
         ----------
         data: the primary input each characteristic function expects as its
-            first positional argument (e.g. an OHLCV DataFrame for
-            ``crspd``/``crspm`` characteristics, or a fundamentals DataFrame
-            for ``funda``/``fundq``).
+            first positional argument (e.g. an OHLCV DataFrame for price
+            characteristics, or a fundamentals DataFrame for accounting
+            ratios).
         names: characteristic names to compute; defaults to every
-            *implemented* characteristic (optionally filtered by
-            ``data_class``).
-        data_class: restrict the default ``names`` to a CSV ``class``
-            (``"crspd"``, ``"crspm"``, ``"funda"``, ``"fundq"``, ``"merge"``).
+            implemented characteristic.
         extra_kwargs: forwarded to whichever characteristic functions accept
             a matching keyword (e.g. ``mkt_ret=...``, ``shares_out=...``,
             ``me=...``); functions that don't declare a given keyword simply
@@ -57,7 +53,7 @@ class CharacteristicEngine:
         characteristic (characteristics that raised an error are skipped
         with a warning, not included in the output).
         """
-        names = names or self.registry.names(data_class=data_class, implemented_only=True)
+        names = names or list_implemented()
         results: dict[str, pd.Series] = {}
         for name in names:
             try:
@@ -79,7 +75,6 @@ class CharacteristicEngine:
         self,
         panel: dict[str, pd.DataFrame],
         names: list[str] | None = None,
-        data_class: str | None = None,
         **extra_kwargs,
     ) -> pd.DataFrame:
         """Compute characteristics across a universe of symbols.
@@ -95,7 +90,7 @@ class CharacteristicEngine:
         """
         frames = []
         for symbol, data in panel.items():
-            char_df = self.compute(data, names=names, data_class=data_class, **extra_kwargs)
+            char_df = self.compute(data, names=names, **extra_kwargs)
             char_df = char_df.copy()
             char_df["symbol"] = symbol
             frames.append(char_df.set_index("symbol", append=True))

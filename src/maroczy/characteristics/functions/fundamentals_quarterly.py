@@ -1,7 +1,7 @@
-"""Quarterly fundamentals characteristics (CSV ``class == "fundq"``).
+"""Quarterly fundamentals characteristics.
 
 Functions operate on a quarterly fundamentals DataFrame indexed by
-fiscal-quarter-end date, using Compustat-style column names (``atq`` =
+fiscal-quarter-end date, using standard short-form column names (``atq`` =
 total assets, ``ibq`` = quarterly income before extraordinary items, ``ceqq``
 = common equity, ``saleq`` = quarterly sales, ``epspxq`` = quarterly EPS,
 ``cshprq`` = shares used for EPS).

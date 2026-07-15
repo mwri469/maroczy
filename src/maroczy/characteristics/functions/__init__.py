@@ -1,18 +1,17 @@
-"""Characteristic function implementations, keyed by the ``function`` column
-of ``characteristics mapping.csv`` via the :func:`characteristic` decorator.
+"""Characteristic function implementations registered via the
+:func:`characteristic` decorator.
 
 Each implemented characteristic is a plain function; submodules are grouped
-by the CSV's ``class`` column:
+by input data type:
 
-- :mod:`crspd`  -- daily price/volume based (operates on an OHLCV DataFrame,
-  the same shape returned by :meth:`maroczy.broker.data.MarketData.history`).
-- :mod:`crspm`  -- monthly-frequency price based (also operates on an OHLCV
-  DataFrame; period lengths are expressed in trading days so they work on
-  daily bars too).
-- :mod:`funda`  -- annual fundamentals (operates on a user-supplied
-  Compustat-style fundamentals DataFrame).
-- :mod:`fundq`  -- quarterly fundamentals.
-- :mod:`merge`  -- characteristics that combine price and fundamental data.
+- :mod:`price_daily`  -- daily price/volume based (operates on an OHLCV
+  DataFrame indexed by date).
+- :mod:`price_monthly`  -- monthly-frequency price based (also operates on
+  an OHLCV DataFrame; period lengths are expressed in trading days so they
+  work on daily bars too).
+- :mod:`fundamentals_annual`  -- annual financial-statement ratios.
+- :mod:`fundamentals_quarterly`  -- quarterly financial-statement ratios.
+- :mod:`composite`  -- characteristics that combine price and fundamental data.
 """
 
 from __future__ import annotations
@@ -47,6 +46,21 @@ def list_implemented() -> list[str]:
 
 
 # Import submodules so their @characteristic-decorated functions self-register.
-from maroczy.characteristics.functions import crspd, crspm, funda, fundq, merge  # noqa: E402,F401
+from maroczy.characteristics.functions import (  # noqa: E402,F401
+    composite,
+    fundamentals_annual,
+    fundamentals_quarterly,
+    price_daily,
+    price_monthly,
+)
 
-__all__ = ["characteristic", "get_function", "list_implemented", "crspd", "crspm", "funda", "fundq", "merge"]
+__all__ = [
+    "characteristic",
+    "get_function",
+    "list_implemented",
+    "price_daily",
+    "price_monthly",
+    "fundamentals_annual",
+    "fundamentals_quarterly",
+    "composite",
+]

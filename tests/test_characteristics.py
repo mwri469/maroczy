@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-import pytest
 
 from maroczy.characteristics import CharacteristicEngine, CharacteristicRegistry
 
@@ -17,29 +16,22 @@ def _fake_bars(n=800, seed=0):
     return pd.DataFrame({"open": open_, "high": high, "low": low, "close": close, "volume": volume}, index=idx)
 
 
-def test_registry_loads_full_csv():
+def test_registry_lists_implemented():
     registry = CharacteristicRegistry()
-    assert len(registry) > 300
-    coverage = registry.coverage()
-    assert coverage["total_named"] > 100
-    assert coverage["implemented"] > 20
+    names = registry.names()
+    assert len(names) > 20
+    assert "ami_126d" in names
+    assert "ret_12_1" in names
 
 
-def test_registry_names_filter_by_class():
+def test_registry_get_function():
     registry = CharacteristicRegistry()
-    crspd_names = registry.names(data_class="crspd")
-    assert "ami_126d" in crspd_names
-
-
-def test_registry_search():
-    registry = CharacteristicRegistry()
-    result = registry.search("momentum")
-    assert len(result) > 0
+    func = registry.get("retvol")
+    assert callable(func)
 
 
 def test_engine_compute_core_subset():
     bars = _fake_bars()
-    mkt_ret = bars["close"].pct_change()
     engine = CharacteristicEngine()
     out = engine.compute(bars, names=["ret_12_1", "ami_126d", "retvol", "bidaskhl_21d"])
     assert set(out.columns) == {"ret_12_1", "ami_126d", "retvol", "bidaskhl_21d"}

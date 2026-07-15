@@ -1,8 +1,7 @@
-"""Monthly-frequency price characteristics (CSV ``class == "crspm"``).
+"""Monthly-frequency price characteristics.
 
 Period lengths are expressed in trading days (``~21`` per month, ``~252``
-per year) so these work directly on daily bars from
-:meth:`maroczy.broker.data.MarketData.history` without requiring a separate
+per year) so these work directly on daily bars without requiring a separate
 monthly resample.
 """
 

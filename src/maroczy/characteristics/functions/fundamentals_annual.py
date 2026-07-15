@@ -1,13 +1,12 @@
-"""Annual fundamentals characteristics (CSV ``class == "funda"``).
+"""Annual fundamentals characteristics.
 
-Functions operate on a user-supplied fundamentals DataFrame indexed by
-fiscal-period-end date, using standard Compustat-style column names (``at``
-= total assets, ``ceq`` = common equity, ``sale`` = sales/revenue, ``ni`` =
-net income, ``dltt``/``dlc`` = long/short-term debt, ``ebit``, ``che`` =
-cash & equivalents, ``act``/``lct`` = current assets/liabilities, ``lt`` =
-total liabilities, ``re`` = retained earnings, ``capx`` = capex). Functions
-needing market equity accept ``me: pd.Series`` (e.g. from
-:func:`maroczy.characteristics.functions.crspm.market_equity`).
+Functions operate on a fundamentals DataFrame indexed by fiscal-period-end
+date, using standard short-form column names (``at`` = total assets, ``ceq``
+= common equity, ``sale`` = sales/revenue, ``ni`` = net income,
+``dltt``/``dlc`` = long/short-term debt, ``ebit``, ``che`` = cash &
+equivalents, ``act``/``lct`` = current assets/liabilities, ``lt`` = total
+liabilities, ``re`` = retained earnings, ``capx`` = capex). Functions
+needing market equity accept ``me: pd.Series``.  
 
 This is a deliberately small, high-value core subset -- extend by adding
 more ``@characteristic``-decorated functions following the same pattern.
