@@ -101,7 +101,6 @@ def beta_dimson_21d(df: pd.DataFrame, mkt_ret: pd.Series, window: int = 21, lags
     y = frame["ret"].to_numpy()
     X = np.column_stack([np.ones(len(frame))] + [frame[c].to_numpy() for c in regs])
     out = np.full(len(frame), np.nan)
-    p = X.shape[1]
     for i in range(window - 1, len(frame)):
         Xi = X[i - window + 1 : i + 1]
         yi = y[i - window + 1 : i + 1]

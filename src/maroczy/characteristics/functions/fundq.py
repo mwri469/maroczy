@@ -9,7 +9,6 @@ total assets, ``ibq`` = quarterly income before extraordinary items, ``ceqq``
 
 from __future__ import annotations
 
-import numpy as np
 import pandas as pd
 
 from maroczy.characteristics.functions import characteristic

@@ -4,7 +4,6 @@ ranking, composite scoring, and long/short weight construction.
 
 from __future__ import annotations
 
-import numpy as np
 import pandas as pd
 
 __all__ = ["zscore", "rank_signal", "combine_signals", "long_short_weights"]
