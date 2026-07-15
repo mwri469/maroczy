@@ -58,6 +58,17 @@ chars = engine.compute(bars, names=["ret_12_1", "vol_252d", "ami_126d"])
 
 Requires a running TWS or IB Gateway instance (paper or live) with API access enabled.
 
+## Notebooks
+
+- `notebooks/quickstart.ipynb` -- end-to-end tour of every feature above.
+- `notebooks/options_risk_neutral_surfaces.ipynb` -- builds implied-volatility and
+  Breeden-Litzenberger risk-neutral density surfaces from an LSE options chain, and
+  reads off options-market-implied probabilities (e.g. "odds of +10% by expiry").
+- `notebooks/lse_market_intelligence.ipynb` -- options-flow "smart money" leaderboard,
+  a 10Y-2Y yield-curve dashboard, a CPI-print volatility event study, an insider-trading
+  forward-return signal check, and a multi-asset GSADF bubble screener across the LSE
+  catalog.
+
 ## Data sources: IBKR vs. LSE
 
 `maroczy.datafeed.UnifiedMarketData` gives you one `.history()` call that
