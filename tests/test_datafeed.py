@@ -96,6 +96,9 @@ def test_requires_at_least_one_source():
         UnifiedMarketData()
 
 
-def test_lse_data_requires_api_key():
+def test_lse_data_requires_api_key(monkeypatch):
+    # explicitly clear regardless of any real .env loaded into this process/environment
+    monkeypatch.delenv("LSE_API_KEY", raising=False)
+    monkeypatch.delenv("lse_api_key", raising=False)
     with pytest.raises(ValueError):
         LSEData(api_key=None, cache_path=None)

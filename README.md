@@ -19,8 +19,22 @@ pip install -e ".[notebook]"
 
 # optional: London Strategic Edge integration
 pip install -e ".[notebook,lse]"
-$env:LSE_API_KEY = "lse_live_..."   # or pass api_key=... explicitly
 ```
+
+## Configuration (.env)
+
+Per-user secrets (like your LSE API key) live in a local `.env` file, never
+committed to git:
+
+```powershell
+Copy-Item .env.example .env
+notepad .env   # fill in LSE_API_KEY (and optionally IBKR_HOST/PORT/CLIENT_ID)
+```
+
+`import maroczy` loads `.env` automatically (see `maroczy/config.py`), so
+`LSEData()` and `Broker()` pick up your values with no extra setup — real
+environment variables (e.g. set in CI) always take precedence over `.env`.
+Each teammate keeps their own `.env`; only `.env.example` is version controlled.
 
 ## Quickstart
 
