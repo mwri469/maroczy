@@ -21,6 +21,7 @@ dependencies = [
 [project.optional-dependencies]
 notebook = ["jupyter", "matplotlib", "ipywidgets"]
 fast = ["numba>=0.59"]
+lse = ["lse-data[frames]>=0.14"]
 dev = ["pytest", "pytest-cov", "ruff"]
 
 [tool.setuptools.packages.find]
