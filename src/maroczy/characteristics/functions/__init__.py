@@ -47,9 +47,12 @@ def list_implemented() -> list[str]:
 
 # Import submodules so their @characteristic-decorated functions self-register.
 from maroczy.characteristics.functions import (  # noqa: E402,F401
+    alternative,
     composite,
     fundamentals_annual,
     fundamentals_quarterly,
+    macro_derived,
+    options_derived,
     price_daily,
     price_monthly,
 )
@@ -63,4 +66,7 @@ __all__ = [
     "fundamentals_annual",
     "fundamentals_quarterly",
     "composite",
+    "options_derived",
+    "macro_derived",
+    "alternative",
 ]

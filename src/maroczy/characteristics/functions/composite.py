@@ -58,3 +58,29 @@ def qmj(profitability: pd.Series, growth: pd.Series, safety: pd.Series) -> pd.Se
     """
     frame = pd.concat({"profitability": profitability, "growth": growth, "safety": safety}, axis=1)
     return _cross_sectional_zscore(frame).sum(axis=1)
+
+
+# ---------------------------------------------------------------------------
+# Mispricing factors (Stambaugh & Yuan 2017)
+# ---------------------------------------------------------------------------
+
+@characteristic("mispricing_mgmt")
+def mispricing_mgmt(management_components: pd.DataFrame) -> pd.Series:
+    """Stambaugh & Yuan (2017): management mispricing sub-score.
+
+    ``management_components``: DataFrame indexed by symbol with columns for
+    each management anomaly rank (net stock issues, composite equity issuance,
+    accruals, net operating assets, asset growth); cross-sectionally averaged.
+    """
+    return _cross_sectional_zscore(management_components).mean(axis=1)
+
+
+@characteristic("mispricing_perf")
+def mispricing_perf(performance_components: pd.DataFrame) -> pd.Series:
+    """Stambaugh & Yuan (2017): performance mispricing sub-score.
+
+    ``performance_components``: DataFrame indexed by symbol with columns for
+    each performance anomaly rank (financial distress, O-score, momentum,
+    gross profitability, ROA); cross-sectionally averaged.
+    """
+    return _cross_sectional_zscore(performance_components).mean(axis=1)
